@@ -1,0 +1,13 @@
+check_in_year
+check_in_month
+check_in_day
+check_in_dayofweek
+check_in_is_weekend
+check_out_year
+check_out_month
+check_out_day
+check_out_dayofweek
+check_out_is_weekend
+days
+month
+year
