@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 from datetime import datetime
 from sklearn.preprocessing import StandardScaler
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 # Load the models
 rf_model_cancel = joblib.load('./models/rf_model_cancel.pkl')
 rf_model_book = joblib.load('./models/rf_model_book.pkl')

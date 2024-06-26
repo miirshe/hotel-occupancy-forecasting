@@ -1,7 +1,6 @@
 import ImageFallback from "@/helpers/ImageFallback";
 import MDXContent from "@/helpers/MDXContent";
 import { getActiveLanguages, getLanguageObj } from "@/lib/languageParser";
-
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
@@ -9,6 +8,7 @@ import { RegularPage } from "@/types";
 import path from "path";
 import PageHeader from "@/partials/PageHeader";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CheckDate from "@/components/check-date";
 
 const page = ({ params }: { params: { lang: string } }) => {
   const language = getLanguageObj(params.lang);
@@ -17,6 +17,9 @@ const page = ({ params }: { params: { lang: string } }) => {
   );
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
+
+
+
   return (
     <>
       <SeoMeta
@@ -28,6 +31,7 @@ const page = ({ params }: { params: { lang: string } }) => {
       <PageHeader title={"Check In & Check Out"}>
         <Breadcrumbs lang={params.lang} />
       </PageHeader>
+      <CheckDate/>
     </>
   );
 };
